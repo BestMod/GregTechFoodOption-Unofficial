@@ -15,6 +15,7 @@ import gregtechfoodoption.GTFOConfig;
 import gregtechfoodoption.GTFOValues;
 import gregtechfoodoption.block.GTFOCrops;
 import gregtechfoodoption.potion.CreativityPotion;
+import gregtechfoodoption.potion.CyanidePoisoningPotion;
 import gregtechfoodoption.potion.SnowGolemSpawnerPotion;
 import gregtechfoodoption.potion.StepAssistPotion;
 import gregtechfoodoption.utils.GTFOUtils;
@@ -692,7 +693,7 @@ public class GTFOMetaItem extends StandardMetaItem implements IEdible {
         CAPLET_CAP = addItem(16000, "caplet_cap");
         CAPLET_BODY = addItem(16001, "caplet_body");
         GEL_CAPLET = addItem(16002, "gel_caplet");
-        CYANIDE_CAPLET = addItem(16003, "food.cyanide_caplet").addComponents(new GTFOFoodStats(0, 1f, false, true, ItemStack.EMPTY, new RandomPotionEffect(MobEffects.INSTANT_DAMAGE, 6000, 0, 0)).setEatingDuration(1));
+        CYANIDE_CAPLET = addItem(16003, "food.cyanide_caplet").addComponents(new GTFOFoodStats(0, 1f, false, true, ItemStack.EMPTY, new RandomPotionEffect(CyanidePoisoningPotion.INSTANCE, 6000, 0, 0)).setEatingDuration(1));
         ROLLING_PAPER = addItem(16004, "rolling_paper");
         ASBESTOS_JOINT = addItem(16005, "food.asbestos_joint").addComponents(new GTFOFoodStats(0, 1f, false, true, ItemStack.EMPTY, new RandomPotionEffect(MobEffects.WITHER, 2147483647, 0, 50)).setEatingDuration(60));
         FLATTENED_WOOD_PULP = addItem(16006, "flattened_wood_pulp");
@@ -701,12 +702,12 @@ public class GTFOMetaItem extends StandardMetaItem implements IEdible {
         HANDFUL_PARACETAMOL = addItem(16009, "food.handful_paracetamol").addComponents(new GTFOFoodStats(0, 1f, false, true, ItemStack.EMPTY, new RandomPotionEffect(MobEffects.INSTANT_DAMAGE, 400, 0, 0)).setEatingDuration(1));
         PLUTONIUM_241_CAPLET = addItem(16010, "plutonium_241_caplet").addComponents(new GTFOFoodStats(0, 1f, false, true, ItemStack.EMPTY, new RandomPotionEffect(MobEffects.POISON, 7000, 0, 0)).setEatingDuration(1));
         IV_BAG = addItem(16011, "iv_bag");
-        SYRINGE = addItem(16012, "syringe");
-        DIRTY_SYRINGE = addItem(16013, "dirty_syringe");
-        IMPOSTRAMINE_CAPLET = addItem(16014, "impostramine_caplet").addComponents(new GTFOFoodStats(1, 100f, false, true, ItemStack.EMPTY, new RandomPotionEffect(MobEffects.SPEED, 14400, 1, 0), new RandomPotionEffect(MobEffects.STRENGTH, 14400, 1, 0), new RandomPotionEffect(MobEffects.BLINDNESS, 14400, 0, 0)).setEatingDuration(1));
-        GREGANYL_CITRATE_IV_INJECTION = addItem(16015, "greganyl_citrate_iv_injection").addComponents(new GTFOFoodStats(0, 1f, true, true, ItemStack.EMPTY, new RandomPotionEffect(MobEffects.REGENERATION, 500, 3, 30), new RandomPotionEffect(MobEffects.NAUSEA, 750, 9, 10), new RandomPotionEffect(MobEffects.BLINDNESS, 1000, 0, 10)));
-        HYDROXYCOBALAMIN_IV_INJECTION = addItem(16016, "hydroxycobalamin_iv_injection").addComponents(new GTFOFoodStats(0, 1f, true, true, ItemStack.EMPTY));
-        DIRTY_IV_BAG = addItem(16017, "dirty_iv_bag");
+        DIRTY_IV_BAG = addItem(16012, "dirty_iv_bag");
+        SYRINGE = addItem(16013, "syringe");
+        DIRTY_SYRINGE = addItem(16014, "dirty_syringe");
+        IMPOSTRAMINE_CAPLET = addItem(16015, "impostramine_caplet").addComponents(new GTFOFoodStats(1, 100f, false, true, ItemStack.EMPTY, new RandomPotionEffect(MobEffects.SPEED, 14400, 1, 0), new RandomPotionEffect(MobEffects.STRENGTH, 14400, 1, 0), new RandomPotionEffect(MobEffects.BLINDNESS, 14400, 0, 0)).setEatingDuration(1));
+        GREGANYL_CITRATE_IV_INJECTION = addItem(16016, "greganyl_citrate_iv_injection").addComponents(new GTFOFoodStats(0, 1f, true, true, ItemStack.EMPTY, new RandomPotionEffect(MobEffects.REGENERATION, 500, 3, 30), new RandomPotionEffect(MobEffects.NAUSEA, 750, 9, 10), new RandomPotionEffect(MobEffects.BLINDNESS, 1000, 0, 10)));
+        HYDROXYCOBALAMIN_IV_INJECTION = addItem(16017, "hydroxycobalamin_iv_injection").addComponents(new GTFOFoodStats(0, 1f, true, true, ItemStack.EMPTY));
 
         SPRINKLER_COVER = addItem(224, "cover.sprinkler");
 

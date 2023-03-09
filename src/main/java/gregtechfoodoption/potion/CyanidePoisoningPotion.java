@@ -1,10 +1,17 @@
 package gregtechfoodoption.potion;
 
 import gregtechfoodoption.utils.GTFODamageSources;
+import gregtechfoodoption.item.GTFOMetaItem.*;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.MobEffects;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.text.TextComponentTranslation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static gregtechfoodoption.item.GTFOMetaItem.HYDROXYCOBALAMIN_IV_INJECTION;
 
 public class CyanidePoisoningPotion extends GTFOPotion {
     public static final String TAG_NAME = "gregtechfoodoption - cyanidepoisoning";
@@ -49,5 +56,12 @@ public class CyanidePoisoningPotion extends GTFOPotion {
     @Override
     public boolean shouldRender(PotionEffect effect) {
         return false;
+    }
+
+    @Override
+    public List<ItemStack> getCurativeItems() {
+        ArrayList<ItemStack> list = new ArrayList<ItemStack>();
+        list.add(HYDROXYCOBALAMIN_IV_INJECTION.getStackForm());
+        return list;
     }
 }
